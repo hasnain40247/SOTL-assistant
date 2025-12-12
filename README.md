@@ -1,6 +1,6 @@
 # SOTL Research Bot
 
-<img src="./public/image.png">
+<img src="./public/image2.png">
 
 ## Overview
 
