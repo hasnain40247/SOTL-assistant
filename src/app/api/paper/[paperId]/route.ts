@@ -16,8 +16,10 @@ function timestampToId(timestamp: string) {
     return `${yyyy}${MM}${dd}${HH}${mm}${ss}`;
   }
   
- 
-  
+ interface PaperRow {
+    Timestamp: string;
+    [key: string]: unknown; // if you have extra fields
+  }
 export async function GET(
   req: NextApiRequest,
   { params }: { params: { paperId: string } }
@@ -41,7 +43,8 @@ const { paperId } = params;
 
 
 
-  const row = rows.find((r: any) => timestampToId(r.Timestamp) === paperId);
+//   const row = rows.find((r: any) => timestampToId(r.Timestamp) === paperId);
+  const row = rows.find((r: PaperRow) => timestampToId(r.Timestamp) === paperId);
   console.log(row)
 
 
