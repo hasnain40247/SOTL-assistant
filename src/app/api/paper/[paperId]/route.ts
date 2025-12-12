@@ -1,5 +1,4 @@
 import { NextResponse } from "next/server";
-import type { NextApiRequest } from 'next'
 import pdfParse from "pdf-parse";
 import Papa from "papaparse";
 
@@ -21,7 +20,7 @@ function timestampToId(timestamp: string) {
     [key: string]: unknown; // if you have extra fields
   }
 export async function GET(
-  req: NextApiRequest,
+  req: Request,
   { params }: { params: { paperId: string } }
 ) {
 
