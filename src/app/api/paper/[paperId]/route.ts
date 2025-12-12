@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest } from 'next'
 import pdfParse from "pdf-parse";
 import Papa from "papaparse";
 
