@@ -21,12 +21,12 @@ function timestampToId(timestamp: string) {
   }
 export async function GET(
   req: Request,
-  { params }: { params: { paperId: string } }
+  { params } : { params: Promise<{ paperId: string }> }
 ) {
 
 
 
-const { paperId } = params;
+const { paperId } = await params;
 
   console.log("paperid",paperId);
   
