@@ -1,6 +1,4 @@
-# Project Name
-
-A Next.js application for project management with integrated chat functionality.
+# SOTL Research Bot
 
 <img src="./public/image.png">
 
