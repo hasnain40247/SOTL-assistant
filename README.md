@@ -3,7 +3,6 @@
 A Next.js application for project management with integrated chat functionality.
 
 <img src="./public/image.png">
-<img src="./public/image copy.png">
 
 ## Overview
 
