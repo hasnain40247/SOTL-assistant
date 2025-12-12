@@ -5,7 +5,7 @@ interface ChatMessageCardProps {
   
   export default function ChatMessageCard({ role, content }: ChatMessageCardProps) {
     const imageSrc = role === 'user' ? '/user.png' : '/system.png';
-    const name = role === 'user' ? 'You' : 'Ollama';
+    const name = role === 'user' ? 'You' : 'Claude';
   
     return (
       <div className="flex items-start w-full space-x-4 ">

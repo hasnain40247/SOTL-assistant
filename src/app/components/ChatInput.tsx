@@ -5,10 +5,12 @@ import { useState } from 'react';
 interface ChatInputProps {
   onSend: (message: string) => void;
   placeholder: string;
+  disabled: boolean;
+
 
 }
 
-export default function ChatInput({ onSend,placeholder }: ChatInputProps) {
+export default function ChatInput({ onSend,placeholder,disabled }: ChatInputProps) {
   const [message, setMessage] = useState('');
 
   const handleSend = () => {
@@ -36,8 +38,11 @@ export default function ChatInput({ onSend,placeholder }: ChatInputProps) {
 
       <div className="flex justify-end items-center space-x-3 mt-4">
         <button
+        disabled={disabled}
           onClick={handleSend}
-          className="bg-[#FE7743] animate-bounce hover:bg-orange-500 text-white rounded-full h-10 w-10 flex items-center justify-center"
+          className={`${
+            !disabled ? 'animate-bounce' : ''
+          } bg-[#FE7743]  hover:bg-orange-500 disabled:bg-gray-400 disabled:cursor-not-allowed text-white rounded-full h-10 w-10 flex items-center justify-center`}
         >
           <span className="text-xl leading-none">↑</span>
         </button>
