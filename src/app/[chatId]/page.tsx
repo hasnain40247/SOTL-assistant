@@ -101,10 +101,20 @@ export default function ChatThreadPage() {
           )}
 
           {!loading && showWelcome && messages.length === 0 && (
+            // <ChatMessageCard
+            //   role="assistant"
+            //   content={`Hello! I'm your SOTL research assistant. Ask me anything about this paper to get started. Start by asking me about the paper titled: ${title}`}
+            // />
             <ChatMessageCard
-              role="assistant"
-              content={`Hello! I'm your SOTL research assistant. Ask me anything about this paper to get started. Start by asking me about the paper titled: ${title}`}
-            />
+  role="assistant"
+  content={`Hello! I'm your SoTL research assistant. Ask me anything about this paper titled: ${title} or about your own study. 
+
+I can help you:
+
+1. Analyze the article’s inquiry approach, SoTL principles, research design, data collection methods, learning strategies, and classroom context   
+2. Discuss your SoTL project, offer collegial guidance, pose reflective questions!`}
+ />
+
           )}
 
           {!loading &&

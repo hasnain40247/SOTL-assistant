@@ -2,6 +2,9 @@ interface ChatMessageCardProps {
     role: 'user' | 'assistant';
     content: string;
   }
+
+  import { Streamdown } from 'streamdown'
+
   
   export default function ChatMessageCard({ role, content }: ChatMessageCardProps) {
     const imageSrc = role === 'user' ? '/user.png' : '/system.png';
@@ -23,7 +26,8 @@ interface ChatMessageCardProps {
           }`}
         >
           <div className="text-xs text-gray-400 mb-1">{name}</div>
-          <div className="whitespace-pre-wrap">{content}</div>
+          {/* <div className="whitespace-pre-wrap">{content}</div> */}
+          <Streamdown>{content}</Streamdown>
         </div>
       </div>
     );
