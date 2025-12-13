@@ -1,15 +1,7 @@
 import { NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 
-function sendEvent(
-  controller: ReadableStreamDefaultController,
-  encoder: TextEncoder,
-  payload: Record<string, any>
-) {
-  controller.enqueue(
-    encoder.encode(JSON.stringify(payload) + '\n')
-  );
-}
+
 
 
 export async function POST(req: Request) {
