@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { NextResponse } from 'next/server';
 import Anthropic from '@anthropic-ai/sdk';
 import Exa from 'exa-js';
