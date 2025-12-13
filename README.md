@@ -58,10 +58,10 @@ src/
    # or
    yarn
    ```
-3. Configure environment variables
+3. Create your ```.env``` file and configure environment variables
    ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
+   ANTHROPIC_API_KEY=your_anthropic_api_key_here
+   EXA_API_KEY=your_exa_api_key_here
    ```
 
 5. Run development server
